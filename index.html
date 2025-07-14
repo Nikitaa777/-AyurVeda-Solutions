@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurVeda Solutions - Complete Natural Healing Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">🌿</div>
+            <div class="loading-text">AyurVeda Solutions</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🌿</div>
+                <span>AyurVeda Solutions</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#search" class="nav-link" data-section="search">
+                        <span class="nav-icon">🔍</span>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dosha" class="nav-link" data-section="dosha">
+                        <span class="nav-icon">⚖️</span>
+                        <span>Dosha Quiz</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#herbs" class="nav-link" data-section="herbs">
+                        <span class="nav-icon">🌱</span>
+                        <span>Herbs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-icon">📚</span>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-icon">📞</span>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="voice-search" id="voiceSearch" title="Voice Search">
+                    <span class="voice-icon">🎤</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-background">
+                    <div class="hero-pattern"></div>
+                    <div class="floating-elements">
+                        <div class="floating-leaf leaf-1">🍃</div>
+                        <div class="floating-leaf leaf-2">🌿</div>
+                        <div class="floating-leaf leaf-3">🍀</div>
+                        <div class="floating-leaf leaf-4">🌱</div>
+                    </div>
+                </div>
+                
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-icon">✨</span>
+                            <span>5000+ Years of Ancient Wisdom</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Discover Natural Healing with 
+                            <span class="gradient-text">Ayurveda</span>
+                        </h1>
+                        
+                        <p class="hero-description">
+                            Your comprehensive guide to traditional Ayurvedic remedies, personalized dosha assessment, 
+                            and holistic wellness solutions for modern life.
+                        </p>
+                        
+                        <div class="hero-search">
+                            <div class="search-container">
+                                <input type="text" id="heroSearchInput" placeholder="Search diseases, symptoms, or remedies..." autocomplete="off">
+                                <button class="search-btn" onclick="performHeroSearch()">
+                                    <span class="search-icon">🔍</span>
+                                </button>
+                                <button class="voice-btn" onclick="startVoiceSearch('hero')">
+                                    <span class="voice-icon">🎤</span>
+                                </button>
+                            </div>
+                            <div class="search-suggestions" id="heroSuggestions"></div>
+                        </div>
+                        
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="showSection('search')">
+                                <span class="btn-icon">🔍</span>
+                                <span>Explore Remedies</span>
+                            </button>
+                            <button class="btn btn-secondary" onclick="showSection('dosha')">
+                                <span class="btn-icon">⚖️</span>
+                                <span>Take Dosha Quiz</span>
+                            </button>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Diseases Covered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Natural Remedies</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Ayurvedic Herbs</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-illustration">
+                            <div class="illustration-circle main-circle">
+                                <div class="circle-content">
+                                    <div class="ayurveda-symbol">🕉️</div>
+                                </div>
+                            </div>
+                            <div class="illustration-circle circle-1">
+                                <div class="circle-icon">🌱</div>
+                            </div>
+                            <div class="illustration-circle circle-2">
+                                <div class="circle-icon">🧘</div>
+                            </div>
+                            <div class="illustration-circle circle-3">
+                                <div class="circle-icon">💊</div>
+                            </div>
+                            <div class="illustration-circle circle-4">
+                                <div class="circle-icon">🍃</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Access Section -->
+            <div class="quick-access">
+                <div class="container">
+                    <h2 class="section-title">Quick Health Solutions</h2>
+                    <div class="quick-grid">
+                        <div class="quick-card" onclick="searchDisease('cold')">
+                            <div class="quick-icon">🤧</div>
+                            <h3>Cold & Cough</h3>
+                            <p>Natural remedies for respiratory issues</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                        <div class="quick-card" onclick="searchDisease('acidity')">
+                            <div class="quick-icon">🔥</div>
+                            <h3>Acidity</h3>
+                            <p>Digestive solutions and dietary tips</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                        <div class="quick-card" onclick="searchDisease('headache')">
+                            <div class="quick-icon">🤕</div>
+                            <h3>Headache</h3>
+                            <p>Relief through herbs and lifestyle</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                        <div class="quick-card" onclick="searchDisease('joint pain')">
+                            <div class="quick-icon">🦴</div>
+                            <h3>Joint Pain</h3>
+                            <p>Mobility and pain management</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                        <div class="quick-card" onclick="searchDisease('diabetes')">
+                            <div class="quick-icon">🩺</div>
+                            <h3>Diabetes</h3>
+                            <p>Blood sugar management naturally</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                        <div class="quick-card" onclick="searchDisease('insomnia')">
+                            <div class="quick-icon">😴</div>
+                            <h3>Insomnia</h3>
+                            <p>Natural sleep enhancement</p>
+                            <div class="quick-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <div class="container">
+                    <div class="features-header">
+                        <h2 class="section-title">Why Choose Ayurvedic Solutions?</h2>
+                        <p class="section-subtitle">Experience the power of ancient wisdom backed by modern understanding</p>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <div class="icon-bg">🌱</div>
+                            </div>
+                            <h3>100% Natural</h3>
+                            <p>All remedies use natural herbs and ingredients with no harmful chemicals or side effects.</p>
+                            <div class="feature-benefits">
+                                <span class="benefit-tag">Safe</span>
+                                <span class="benefit-tag">Effective</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <div class="icon-bg">⚖️</div>
+                            </div>
+                            <h3>Holistic Approach</h3>
+                            <p>Treats the root cause by balancing mind, body, and spirit for complete wellness.</p>
+                            <div class="feature-benefits">
+                                <span class="benefit-tag">Complete</span>
+                                <span class="benefit-tag">Balanced</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <div class="icon-bg">🏠</div>
+                            </div>
+                            <h3>Home Remedies</h3>
+                            <p>Simple solutions using common kitchen ingredients that you can prepare easily.</p>
+                            <div class="feature-benefits">
+                                <span class="benefit-tag">Convenient</span>
+                                <span class="benefit-tag">Affordable</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <div class="icon-bg">🧘</div>
+                            </div>
+                            <h3>Lifestyle Integration</h3>
+                            <p>Includes yoga, meditation, and dietary guidelines for sustainable health.</p>
+                            <div class="feature-benefits">
+                                <span class="benefit-tag">Sustainable</span>
+                                <span class="benefit-tag">Preventive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Tip Section -->
+            <div class="daily-tip-section">
+                <div class="container">
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon">💡</div>
+                            <h2>Daily Ayurvedic Wisdom</h2>
+                        </div>
+                        <div class="tip-content">
+                            <p id="dailyTip" class="tip-text">Loading wisdom...</p>
+                            <div class="tip-actions">
+                                <button class="btn btn-outline" onclick="getNewTip()">
+                                    <span class="btn-icon">🔄</span>
+                                    <span>New Tip</span>
+                                </button>
+                                <button class="btn btn-outline" onclick="shareTip()">
+                                    <span class="btn-icon">📤</span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section id="search" class="section">
+            <div class="search-hero">
+                <div class="container">
+                    <div class="search-header">
+                        <h1 class="page-title">Find Your Natural Remedy</h1>
+                        <p class="page-subtitle">Search through our comprehensive database of Ayurvedic solutions</p>
+                    </div>
+                    
+                    <div class="advanced-search">
+                        <div class="search-main">
+                            <div class="search-input-container">
+                                <input type="text" id="searchInput" placeholder="Enter disease, symptom, or remedy..." autocomplete="off">
+                                <button class="search-btn" onclick="performSearch()">
+                                    <span class="search-icon">🔍</span>
+                                </button>
+                                <button class="voice-btn" onclick="startVoiceSearch('search')">
+                                    <span class="voice-icon">🎤</span>
+                                </button>
+                            </div>
+                            <div class="search-suggestions" id="searchSuggestions"></div>
+                        </div>
+                        
+                        <div class="search-filters">
+                            <div class="filter-group">
+                                <label>Category:</label>
+                                <select id="categoryFilter">
+                                    <option value="">All Categories</option>
+                                    <option value="respiratory">Respiratory</option>
+                                    <option value="digestive">Digestive</option>
+                                    <option value="mental">Mental Health</option>
+                                    <option value="skin">Skin & Hair</option>
+                                    <option value="joint">Joint & Muscle</option>
+                                    <option value="metabolic">Metabolic</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label>Severity:</label>
+                                <select id="severityFilter">
+                                    <option value="">Any Severity</option>
+                                    <option value="mild">Mild</option>
+                                    <option value="moderate">Moderate</option>
+                                    <option value="severe">Severe</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label>Treatment Time:</label>
+                                <select id="timeFilter">
+                                    <option value="">Any Duration</option>
+                                    <option value="immediate">Immediate Relief</option>
+                                    <option value="short">1-7 Days</option>
+                                    <option value="medium">1-4 Weeks</option>
+                                    <option value="long">Long Term</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-categories">
+                        <h3>Popular Searches</h3>
+                        <div class="category-tags">
+                            <button class="category-tag" onclick="searchDisease('cold')">Cold & Cough</button>
+                            <button class="category-tag" onclick="searchDisease('acidity')">Acidity</button>
+                            <button class="category-tag" onclick="searchDisease('headache')">Headache</button>
+                            <button class="category-tag" onclick="searchDisease('joint pain')">Joint Pain</button>
+                            <button class="category-tag" onclick="searchDisease('diabetes')">Diabetes</button>
+                            <button class="category-tag" onclick="searchDisease('hypertension')">High BP</button>
+                            <button class="category-tag" onclick="searchDisease('insomnia')">Insomnia</button>
+                            <button class="category-tag" onclick="searchDisease('constipation')">Constipation</button>
+                            <button class="category-tag" onclick="searchDisease('anxiety')">Anxiety</button>
+                            <button class="category-tag" onclick="searchDisease('skin problems')">Skin Issues</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-results-container">
+                <div class="container">
+                    <div id="searchResults" class="search-results">
+                        <div class="search-welcome">
+                            <div class="welcome-illustration">
+                                <div class="search-graphic">
+                                    <div class="search-circle">🔍</div>
+                                    <div class="remedy-icons">
+                                        <span class="remedy-icon">🌱</span>
+                                        <span class="remedy-icon">💊</span>
+                                        <span class="remedy-icon">🧘</span>
+                                        <span class="remedy-icon">🥗</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Welcome to Natural Healing Search</h2>
+                            <p>Enter a condition above or click on any category to discover personalized Ayurvedic solutions.</p>
+                            
+                            <div class="search-features">
+                                <div class="search-feature">
+                                    <div class="feature-icon">🌱</div>
+                                    <h4>Natural Remedies</h4>
+                                    <p>Home-made solutions using herbs</p>
+                                </div>
+                                <div class="search-feature">
+                                    <div class="feature-icon">💊</div>
+                                    <h4>Ayurvedic Medicines</h4>
+                                    <p>Traditional formulations</p>
+                                </div>
+                                <div class="search-feature">
+                                    <div class="feature-icon">🧘</div>
+                                    <h4>Yoga & Exercises</h4>
+                                    <p>Healing poses and breathing</p>
+                                </div>
+                                <div class="search-feature">
+                                    <div class="feature-icon">🥗</div>
+                                    <h4>Diet Guidelines</h4>
+                                    <p>Nutritional recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dosha Quiz Section -->
+        <section id="dosha" class="section">
+            <div class="dosha-hero">
+                <div class="container">
+                    <div class="dosha-header">
+                        <h1 class="page-title">Discover Your Dosha</h1>
+                        <p class="page-subtitle">Take our comprehensive assessment to understand your unique Ayurvedic constitution</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dosha-content">
+                <div class="container">
+                    <div class="dosha-quiz" id="doshaQuiz">
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="progress-text" id="progressText">Question 1 of 15</span>
+                        </div>
+                        
+                        <div class="quiz-question" id="quizQuestion">
+                            <h3 id="questionText">Loading question...</h3>
+                            <div class="quiz-options" id="quizOptions">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-navigation">
+                            <button class="btn btn-outline" id="prevBtn" onclick="previousQuestion()" disabled>
+                                <span class="btn-icon">←</span>
+                                <span>Previous</span>
+                            </button>
+                            <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>
+                                <span>Next</span>
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="dosha-result" id="doshaResult" style="display: none;">
+                        <div class="result-header">
+                            <h2>Your Dosha Assessment Results</h2>
+                            <div class="result-chart" id="resultChart">
+                                <!-- Chart will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="dosha-details" id="doshaDetails">
+                            <!-- Details will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button class="btn btn-primary" onclick="downloadResults()">
+                                <span class="btn-icon">📄</span>
+                                <span>Download Report</span>
+                            </button>
+                            <button class="btn btn-outline" onclick="retakeQuiz()">
+                                <span class="btn-icon">🔄</span>
+                                <span>Retake Quiz</span>
+                            </button>
+                            <button class="btn btn-outline" onclick="shareResults()">
+                                <span class="btn-icon">📤</span>
+                                <span>Share Results</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herbs Section -->
+        <section id="herbs" class="section">
+            <div class="herbs-hero">
+                <div class="container">
+                    <div class="herbs-header">
+                        <h1 class="page-title">Ayurvedic Herb Encyclopedia</h1>
+                        <p class="page-subtitle">Explore the healing power of nature's pharmacy</p>
+                    </div>
+                    
+                    <div class="herbs-search">
+                        <input type="text" id="herbsSearchInput" placeholder="Search herbs by name or benefits..." autocomplete="off">
+                        <button class="search-btn" onclick="searchHerbs()">
+                            <span class="search-icon">🔍</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="herbs-content">
+                <div class="container">
+                    <div class="herbs-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" onclick="filterHerbs('all')">All Herbs</button>
+                            <button class="filter-tab" onclick="filterHerbs('immunity')">Immunity</button>
+                            <button class="filter-tab" onclick="filterHerbs('digestion')">Digestion</button>
+                            <button class="filter-tab" onclick="filterHerbs('stress')">Stress Relief</button>
+                            <button class="filter-tab" onclick="filterHerbs('skin')">Skin Care</button>
+                            <button class="filter-tab" onclick="filterHerbs('respiratory')">Respiratory</button>
+                        </div>
+                    </div>
+                    
+                    <div class="herbs-grid" id="herbsGrid">
+                        <!-- Herbs will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="about-hero">
+                <div class="container">
+                    <div class="about-header">
+                        <h1 class="page-title">About Ayurveda</h1>
+                        <p class="page-subtitle">Discover the ancient science of life and natural healing</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="container">
+                    <!-- What is Ayurveda -->
+                    <div class="about-section-block">
+                        <div class="content-grid">
+                            <div class="content-text">
+                                <h2>What is Ayurveda?</h2>
+                                <p>Ayurveda, literally meaning "knowledge of life," is an ancient system of natural healing that originated in India over 5,000 years ago. It is considered one of the world's oldest healing systems and focuses on maintaining health through a balanced approach to living.</p>
+                                <p>Unlike modern medicine that often treats symptoms, Ayurveda addresses the root cause of illness by considering the whole person - body, mind, and spirit. It emphasizes prevention and treatment through lifestyle practices, dietary guidelines, herbal remedies, yoga, and meditation.</p>
+                                <div class="key-points">
+                                    <div class="key-point">
+                                        <span class="point-icon">✨</span>
+                                        <span>5000+ years of proven wisdom</span>
+                                    </div>
+                                    <div class="key-point">
+                                        <span class="point-icon">🌍</span>
+                                        <span>Recognized by WHO</span>
+                                    </div>
+                                    <div class="key-point">
+                                        <span class="point-icon">🔬</span>
+                                        <span>Backed by modern research</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-visual">
+                                <div class="ayurveda-illustration">
+                                    <div class="illustration-center">
+                                        <div class="center-symbol">🕉️</div>
+                                        <div class="center-text">Ayurveda</div>
+                                    </div>
+                                    <div class="illustration-elements">
+                                        <div class="element element-1">
+                                            <div class="element-icon">🌱</div>
+                                            <div class="element-label">Herbs</div>
+                                        </div>
+                                        <div class="element element-2">
+                                            <div class="element-icon">🧘</div>
+                                            <div class="element-label">Yoga</div>
+                                        </div>
+                                        <div class="element element-3">
+                                                                                        <div class="element-icon">🥗</div>
+                                            <div class="element-label">Diet</div>
+                                        </div>
+                                        <div class="element element-4">
+                                            <div class="element-icon">💆</div>
+                                            <div class="element-label">Massage</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Core Principles -->
+                    <div class="principles-section">
+                        <h2 class="section-title">Core Principles of Ayurveda</h2>
+                        <div class="principles-grid">
+                            <div class="principle-card">
+                                <div class="principle-icon">⚖️</div>
+                                <h3>Balance & Harmony</h3>
+                                <p>Health is achieved when there is perfect balance between mind, body, and consciousness. Disease occurs when this balance is disturbed.</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">🌊</div>
+                                <h3>Five Elements</h3>
+                                <p>Everything in the universe is composed of five elements: Space, Air, Fire, Water, and Earth (Panchamahabhuta).</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">🔄</div>
+                                <h3>Three Doshas</h3>
+                                <p>The three biological energies - Vata, Pitta, and Kapha - govern all physiological and psychological functions.</p>
+                            </div>
+                            <div class="principle-card">
+                                <div class="principle-icon">🌱</div>
+                                <h3>Natural Healing</h3>
+                                <p>The body has an innate ability to heal itself. Ayurveda supports this natural healing process.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Doshas Detailed -->
+                    <div class="doshas-detailed">
+                        <h2 class="section-title">Understanding the Three Doshas</h2>
+                        <div class="doshas-container">
+                            <div class="dosha-card vata-card">
+                                <div class="dosha-header">
+                                    <div class="dosha-icon">🌪️</div>
+                                    <h3>Vata Dosha</h3>
+                                    <p class="dosha-elements">Air + Space</p>
+                                </div>
+                                <div class="dosha-content">
+                                    <div class="dosha-section">
+                                        <h4>Characteristics:</h4>
+                                        <ul>
+                                            <li>Controls movement and circulation</li>
+                                            <li>Governs breathing and heart function</li>
+                                            <li>Manages nervous system</li>
+                                            <li>Influences creativity and flexibility</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Balanced:</h4>
+                                        <p>Creative, energetic, flexible, and joyful</p>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Imbalanced:</h4>
+                                        <p>Anxiety, insomnia, dry skin, constipation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dosha-card pitta-card">
+                                <div class="dosha-header">
+                                    <div class="dosha-icon">🔥</div>
+                                    <h3>Pitta Dosha</h3>
+                                    <p class="dosha-elements">Fire + Water</p>
+                                </div>
+                                <div class="dosha-content">
+                                    <div class="dosha-section">
+                                        <h4>Characteristics:</h4>
+                                        <ul>
+                                            <li>Controls digestion and metabolism</li>
+                                            <li>Regulates body temperature</li>
+                                            <li>Manages hormones</li>
+                                            <li>Influences intelligence and understanding</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Balanced:</h4>
+                                        <p>Intelligent, focused, confident, and warm</p>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Imbalanced:</h4>
+                                        <p>Anger, acidity, inflammation, skin rashes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dosha-card kapha-card">
+                                <div class="dosha-header">
+                                    <div class="dosha-icon">🌍</div>
+                                    <h3>Kapha Dosha</h3>
+                                    <p class="dosha-elements">Earth + Water</p>
+                                </div>
+                                <div class="dosha-content">
+                                    <div class="dosha-section">
+                                        <h4>Characteristics:</h4>
+                                        <ul>
+                                            <li>Provides structure and stability</li>
+                                            <li>Maintains immunity</li>
+                                            <li>Controls growth and repair</li>
+                                            <li>Influences love and compassion</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Balanced:</h4>
+                                        <p>Calm, loving, patient, and strong</p>
+                                    </div>
+                                    <div class="dosha-section">
+                                        <h4>When Imbalanced:</h4>
+                                        <p>Weight gain, congestion, lethargy, depression</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-hero">
+                <div class="container">
+                    <div class="contact-header">
+                        <h1 class="page-title">Get in Touch</h1>
+                        <p class="page-subtitle">Have questions about Ayurvedic remedies? We're here to help you on your natural healing journey.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-form-section">
+                            <div class="form-container">
+                                <h2>Send us a Message</h2>
+                                <form class="contact-form" id="contactForm">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" id="firstName" name="firstName" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" id="lastName" name="lastName" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="subject">Subject *</label>
+                                        <select id="subject" name="subject" required>
+                                            <option value="">Select a topic</option>
+                                            <option value="general">General Inquiry</option>
+                                            <option value="remedy">Remedy Question</option>
+                                            <option value="consultation">Consultation Request</option>
+                                            <option value="feedback">Website Feedback</option>
+                                            <option value="partnership">Partnership/Collaboration</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="message">Message *</label>
+                                        <textarea id="message" name="message" rows="6" placeholder="Please describe your question or concern in detail..." required></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="newsletter" name="newsletter">
+                                            <span class="checkmark"></span>
+                                            Subscribe to our newsletter for weekly Ayurvedic health tips
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-group checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="terms" name="terms" required>
+                                            <span class="checkmark"></span>
+                                            I agree to the Terms of Service and Privacy Policy *
+                                        </label>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary submit-btn">
+                                        <span class="btn-text">Send Message</span>
+                                        <span class="btn-loading" style="display: none;">
+                                            <span class="loading-spinner"></span>
+                                            Sending...
+                                        </span>
+                                    </button>
+                                </form>
+                                
+                                <div id="formMessage" class="form-message" style="display: none;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-section">
+                            <div class="contact-info">
+                                <h2>Contact Information</h2>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">📧</div>
+                                    <div class="contact-details">
+                                        <h3>Email</h3>
+                                        <p>info@ayurvedasolutions.com</p>
+                                        <p>support@ayurvedasolutions.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">📞</div>
+                                    <div class="contact-details">
+                                        <h3>Phone</h3>
+                                        <p>+91 98765 43210</p>
+                                        <p>+91 87654 32109</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">📍</div>
+                                    <div class="contact-details">
+                                        <h3>Address</h3>
+                                        <p>123 Wellness Street<br>
+                                        Ayurveda Nagar<br>
+                                        New Delhi - 110001<br>
+                                        India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">🕒</div>
+                                    <div class="contact-details">
+                                        <h3>Business Hours</h3>
+                                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                        <p>Sunday: Closed</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-links">
+                                    <h3>Follow Us</h3>
+                                    <div class="social-icons">
+                                        <a href="#" class="social-icon facebook" onclick="openSocial('facebook')">
+                                            <span class="social-emoji">📘</span>
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a href="#" class="social-icon instagram" onclick="openSocial('instagram')">
+                                            <span class="social-emoji">📷</span>
+                                            <span>Instagram</span>
+                                        </a>
+                                        <a href="#" class="social-icon twitter" onclick="openSocial('twitter')">
+                                            <span class="social-emoji">🐦</span>
+                                            <span>Twitter</span>
+                                        </a>
+                                        <a href="#" class="social-icon youtube" onclick="openSocial('youtube')">
+                                            <span class="social-emoji">📺</span>
+                                            <span>YouTube</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🌿</div>
+                        <span>AyurVeda Solutions</span>
+                    </div>
+                    <p>Your trusted source for natural Ayurvedic remedies and holistic health solutions. Bringing ancient wisdom to modern life.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link" onclick="openSocial('facebook')">📘</a>
+                        <a href="#" class="footer-social-link" onclick="openSocial('instagram')">📷</a>
+                        <a href="#" class="footer-social-link" onclick="openSocial('twitter')">🐦</a>
+                        <a href="#" class="footer-social-link" onclick="openSocial('youtube')">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#search" onclick="showSection('search')">Search Remedies</a></li>
+                        <li><a href="#dosha" onclick="showSection('dosha')">Dosha Quiz</a></li>
+                        <li><a href="#herbs" onclick="showSection('herbs')">Herb Encyclopedia</a></li>
+                        <li><a href="#about" onclick="showSection('about')">About Ayurveda</a></li>
+                        <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Popular Remedies</h4>
+                    <ul>
+                        <li><a href="#" onclick="searchDisease('cold')">Cold & Cough</a></li>
+                        <li><a href="#" onclick="searchDisease('acidity')">Acidity</a></li>
+                        <li><a href="#" onclick="searchDisease('headache')">Headache</a></li>
+                        <li><a href="#" onclick="searchDisease('diabetes')">Diabetes</a></li>
+                        <li><a href="#" onclick="searchDisease('joint pain')">Joint Pain</a></li>
+                        <li><a href="#" onclick="searchDisease('insomnia')">Sleep Issues</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" onclick="showHealthCalculator()">Health Calculator</a></li>
+                        <li><a href="#" onclick="showSeasonalTips()">Seasonal Tips</a></li>
+                        <li><a href="#" onclick="showRecipes()">Ayurvedic Recipes</a></li>
+                        <li><a href="#" onclick="showExercises()">Yoga Exercises</a></li>
+                        <li><a href="#" onclick="showMeditation()">Meditation Guide</a></li>
+                        <li><a href="#" onclick="showFAQ()">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-disclaimer">
+                    <p><strong>Medical Disclaimer:</strong> This website provides educational information only. Always consult with qualified healthcare professionals before starting any treatment or making significant changes to your health routine.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 AyurVeda Solutions. All rights reserved. | Made with ❤️ for natural healing</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <span class="scroll-icon">↑</span>
+    </button>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✅</span>
+            <span class="toast-message">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
